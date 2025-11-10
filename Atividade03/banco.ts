@@ -29,8 +29,8 @@ class Banco{
         }
     }
 
-    consultarCliente(cpf:string):Cliente | null{
-        let resultado = null;
+    consultarCliente(cpf:string):Cliente{
+        let resultado!: Cliente;
         for (let cliente of this.clientes){
             if (cliente.cpf == cpf) {
                 resultado = cliente;
